@@ -1,0 +1,311 @@
+:root {
+    --main-height: 100vh 
+}
+
+#section {
+    height: var(--main-height);
+    scroll-snap-align: center;
+}
+
+/* navigation */
+
+#nav-section {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.item {
+    cursor: pointer;
+}
+
+#logo {
+    height: 50px;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#search {
+    width: 20px;
+    cursor: pointer;
+}
+
+#hire-now {
+    width: 100px;
+    padding: 10px;
+    background-color: #da4ea2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* hero component */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-container {
+    height: var(--main-height);
+    scroll-snap-type: center;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-hero {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#title {
+    font-size: 74px;
+}
+
+#whatwedo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#line {
+    height: 5px;
+}
+
+#subtitle {
+    color: #da4ea2;
+}
+
+#description {
+    font-size: 24px;
+    color: lightgrey;
+}
+
+#learn-more {
+    background-color: #da4ea2;
+    color: white;
+    font-weight: 500;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#right-hero {
+    flex: 3;
+    position: relative;
+}
+
+#moon {
+    width: 800px;
+    height: 600px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: animate 2s infinite ease alternate;
+}
+
+@keyframes animate {
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* who component */
+
+.who {
+    height: var(--main-height);
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.who-container {
+    height: var(--main-height);
+    scroll-snap-type: center;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-who {
+    flex: 1;
+}
+
+#right-who {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#see-our-works {
+    background-color: #da4ea2;
+    color: white;
+    font-weight: 750;
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* works component */
+
+.works {
+    display: flex;
+    justify-content: center;
+}
+
+.works-container {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left-works {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right-works {
+    flex: 1;
+}
+
+#works-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+.work-item {
+    font-size: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* when using position absolute the parent should always have position relative */
+.work-item::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.work-item:hover::after {
+    color: blue;
+    animation: moveText 0.5s linear both;
+}
+
+@keyframes moveText {
+    to {
+        width: 100%;
+    }
+}
+
+/* contacts component */
+
+.contacts-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#left-contacts {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#right-contacts {
+    flex: 1;
+}
+
+#title-contacts {
+    font-weight: 200;
+}
+
+#form-contacts {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-contacts {
+    padding: 20px;
+    background-color: #e8e6e6;
+    border: none;
+    border-radius: 5px;
+}
+
+#textarea {
+    padding: 20px;
+    background-color: #e8e6e6;
+    border: none;
+    border-radius: 5px;
+}
+
+#button-contacts {
+    background-color: #da4ea2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#test {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center;
+}
