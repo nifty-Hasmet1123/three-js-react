@@ -1,5 +1,5 @@
 import "./css/style.css";
-import Map from "./Map";
+// import Map from "./Map";
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
@@ -47,7 +47,7 @@ export default function Contacts() {
                     </form>
                 </div>
                 <div id="right-contacts">
-                    <Map />
+{/*                     <Map /> */}
                 </div>
             </div>
         </div>
